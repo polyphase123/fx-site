@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>FX Tobias Works</title>
+<meta name="description" content="Franz Xyrlo Tobias, PEE, RMP: energy regulator, power systems engineer and builder of 100+ interactive apps on the Philippine grid, markets and policy.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Franz Xyrlo Tobias — 100+ apps on the Philippine grid">
+<meta property="og:description" content="Energy regulator and power systems engineer. Interactive tools on ERC rules, Green Energy Auctions, net-metering, the NGCP grid, nuclear and more.">
+<meta property="og:image" content="https://polyphase123.github.io/fx-site/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://polyphase123.github.io/fx-site/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://polyphase123.github.io/fx-site/og.png">
+<meta name="theme-color" content="#eef0ec" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1c2220" media="(prefers-color-scheme: dark)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="FX Works">
+<meta name="format-detection" content="telephone=no">
+<link rel="apple-touch-icon" href="icon-180.png">
+<link rel="icon" type="image/png" href="icon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Courier+Prime&family=Patrick+Hand&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="nav" aria-label="Sections">
+  <ul>
+    <li><a href="#work" data-sec="work" data-i18n="nav.work">[WORK]</a></li>
+    <li><a href="#cases" data-sec="cases" data-i18n="nav.cases">[CASES]</a></li>
+    <li><a href="#hire" data-sec="hire" data-i18n="nav.hire">[HIRE]</a></li>
+    <li><a href="#about" data-sec="about" data-i18n="nav.about">[ABOUT]</a></li>
+  </ul>
+</nav>
+
+<main>
+  <section class="hero" id="top">
+    <div class="wrap">
+      <div class="frame sk" data-seed="3">
+        <div class="board">
+          <canvas id="phase" aria-hidden="true"></canvas>
+          <div class="lockup">
+            <h1>FRANZ XYRLO TOBIAS</h1>
+            <div class="roles" data-i18n="hero.roles"><span>[PROFESSIONAL ELECTRICAL ENGINEER]</span> <span>[INNOVATOR]</span></div>
+          </div>
+          <div class="meter" aria-hidden="true">V<sub>A</sub>∠0° · V<sub>B</sub>∠−120° · V<sub>C</sub>∠+120° · 60 Hz</div>
+        </div>
+      </div>
+      <div class="hero-note">
+        <span data-i18n="hero.note"><b class="nApps">106</b> live web apps on the Philippine grid, markets and policy.</span>
+        <span class="toggles">
+          <button class="tg" id="langBtn" type="button" aria-label="Switch language">[EN | FIL]</button>
+          <button class="tg" id="humBtn" type="button" aria-pressed="false">[HUM: OFF]</button>
+        </span>
+      </div>
+
+      <ul class="stats" id="stats" aria-label="At a glance"></ul>
+    </div>
+  </section>
+
+  <section id="work">
+    <div class="wrap">
+      <h2 class="sec-title" data-i18n="nav.work">[WORK]</h2>
+      <p class="sec-sub" data-i18n="work.sub">Every app is live on GitHub Pages. Start with a favorite, pick a drawer, or search all of them.</p>
+
+      <div class="spot sk" data-seed="41" id="spot" aria-roledescription="carousel" aria-label="Featured apps">
+        <div class="spot-in" id="spotIn"></div>
+        <div class="spot-nav">
+          <button type="button" class="tg" id="spotPrev" aria-label="Previous featured app">[←]</button>
+          <span class="spot-dots" id="spotDots"></span>
+          <button type="button" class="tg" id="spotNext" aria-label="Next featured app">[→]</button>
+        </div>
+      </div>
+
+      <form class="allsearch" id="allForm" role="search">
+        <label for="allQ"><span data-i18n="work.searchAll">SEARCH ALL APPS</span> (<span class="nApps">106</span>)</label>
+        <div class="row">
+          <input id="allQ" type="search" placeholder="GEA, net-metering, nuclear, quiz…" autocomplete="off" enterkeyhint="search">
+          <button type="submit" data-i18n="work.go">[GO]</button>
+          <button type="button" id="randBtn" data-i18n="work.random">[RANDOM]</button>
+        </div>
+      </form>
+      <div class="chips" id="chips" aria-label="Browse by tag"></div>
+
+      <div class="cats" id="cats"></div>
+
+      <div class="tl">
+        <h3 class="sub-title" data-i18n="tl.title">[ONE DOT = ONE APP]</h3>
+        <p class="tl-sub" id="tlSub"></p>
+        <div class="tl-scroll"><div class="tl-chart" id="tlChart"></div></div>
+        <div class="tl-legend" id="tlLegend"></div>
+        <div class="tl-pick" id="tlPick" aria-live="polite"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="notes" id="notes">
+    <div class="wrap">
+      <h2 class="sec-title"><span data-i18n="notes.title">LATELY ON</span> <span class="tag" style="font-size:.5em">#fxitobias</span></h2>
+      <p class="sec-sub" data-i18n="notes.sub">Recent posts from LinkedIn.</p>
+      <div class="notes-grid" id="notesGrid"></div>
+    </div>
+  </section>
+
+  <section id="cases">
+    <div class="wrap">
+      <h2 class="sec-title" data-i18n="nav.cases">[CASES]</h2>
+      <p class="sec-sub" data-i18n="cases.sub">Three apps, and the thinking behind them.</p>
+      <div class="cases" id="casesList"></div>
+    </div>
+  </section>
+
+  <section id="hire">
+    <div class="wrap">
+      <h2 class="sec-title" data-i18n="nav.hire">[HIRE]</h2>
+      <p class="sec-sub" data-i18n="hire.sub">Open to work in Metro Manila, hybrid. Here is what I can take on.</p>
+      <div class="services" id="services"></div>
+      <div class="contact sk" data-seed="91">
+        <p data-i18n="hire.contact">The fastest way to reach me is a LinkedIn message. Tell me the problem, the deadline and who it’s for.</p>
+        <div class="contact-links">
+          <a href="https://www.linkedin.com/in/franz-xyrlo-tobias-pee-rmp-86227488/" target="_blank" rel="noopener" data-i18n="hire.li">[MESSAGE ON LINKEDIN ↗]</a>
+          <a href="https://github.com/polyphase123" target="_blank" rel="noopener">[GITHUB ↗]</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap">
+      <div class="about-grid">
+        <div class="idcard sk" data-seed="11">
+          <div class="mono">FX</div>
+          <div class="creds">PEE · RMP</div>
+          <span class="hey" data-i18n="about.hey">— HEY.</span>
+          <dl>
+            <dt data-i18n="about.base">BASE</dt><dd>Metro Manila, PH</dd>
+            <dt data-i18n="about.field">FIELD</dt><dd data-i18n="about.fieldV">Power systems, energy regulation, quant finance</dd>
+            <dt data-i18n="about.school">SCHOOL</dt><dd>University of the Philippines<br>Lee Kuan Yew School of Public Policy</dd>
+            <dt>STATUS</dt><dd data-i18n="about.statusV">Open to work · hybrid</dd>
+          </dl>
+        </div>
+        <div class="intro">
+          <p class="small" data-i18n="about.my">MY NAME IS</p>
+          <h2>FRANZ XYRLO TOBIAS</h2>
+          <p data-i18n="about.p1">I’m a Professional Electrical Engineer, and most of my career has been in service of the Philippine Government and the Filipino people. I worked on Green Energy Auction rounds 1 to 7, the 2025 amended net-metering rules, and the rules for DER, energy storage, EV charging and microgrids.</p>
+          <p data-i18n="about.p2">Before that I spent seven years at the National Electrification Administration designing substations and rural grids, ran Meralco’s AMI smart grid in Ortigas, and consulted for ADB, the World Bank and NEDA on PPP projects and the Cebu BRT.</p>
+          <p data-i18n="about.p3">After hours I turn regulations and grid physics into small web apps anyone can click through. I tag every one of them <a class="tag" href="https://www.linkedin.com/search/results/content/?keywords=%23fxitobias" target="_blank" rel="noopener">#fxitobias</a>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <span class="sig">— FX</span>
+  <p data-i18n="foot">Inked in Metro Manila. Coded with Claude.</p>
+</footer>
+
+<div class="modal" id="modal" hidden role="dialog" aria-modal="true" aria-labelledby="mTitle">
+  <div class="sheet">
+    <div class="sheet-head">
+      <div style="flex:1;min-width:0">
+        <h3 id="mTitle"></h3>
+        <p class="lead" id="mLead"></p>
+      </div>
+      <button class="x" id="mClose" aria-label="Close"><svg viewBox="0 0 40 40"><path d="M4 5 L36 3 L37 36 L3 37 Z"/><path d="M12 12 L28 29 M28 11 L12 28"/></svg></button>
+    </div>
+    <div class="find">
+      <label for="q" id="qLabel">FILTER THIS DRAWER</label>
+      <input id="q" type="search" placeholder="Try “GEA”, “BESS” or “quiz”" autocomplete="off" enterkeyhint="search">
+    </div>
+    <div class="list" id="mList"></div>
+  </div>
+</div>
+
+<noscript>
+  <div class="wrap" style="padding-block:24px">
+    <p>This page needs JavaScript to list the apps. You can browse all of them on GitHub: <a href="https://github.com/polyphase123?tab=repositories">github.com/polyphase123</a>, or follow <a href="https://www.linkedin.com/in/franz-xyrlo-tobias-pee-rmp-86227488/">Franz on LinkedIn</a>.</p>
+  </div>
+</noscript>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Franz Xyrlo Tobias","honorificSuffix":"PEE, RMP","jobTitle":"Professional Electrical Engineer","address":{"@type":"PostalAddress","addressRegion":"Metro Manila","addressCountry":"PH"},"alumniOf":[{"@type":"CollegeOrUniversity","name":"University of the Philippines"},{"@type":"CollegeOrUniversity","name":"Lee Kuan Yew School of Public Policy"}],"knowsAbout":["Power systems","Energy regulation","Renewable energy","Green Energy Auction","Net-metering","Distribution impact studies","Quantitative finance"],"sameAs":["https://www.linkedin.com/in/franz-xyrlo-tobias-pee-rmp-86227488/","https://github.com/polyphase123"]}
+</script>
+<script src="data.js"></script>
+<script src="content.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
